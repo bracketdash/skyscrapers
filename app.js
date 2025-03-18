@@ -1,4 +1,11 @@
-const inputs = document.querySelectorAll("input");
+const inputs = [...document.querySelectorAll("input")];
+const buildings = document.querySelectorAll(".city div");
+const statusBar = document.querySelector(".status-bar");
+
+function solve(clues) {
+  // TODO
+  return false;
+}
 
 function handleKeyup({ target }) {
   let value = target.value.replace(/[^1-5]/g, "");
@@ -7,7 +14,30 @@ function handleKeyup({ target }) {
     value = "";
   }
   target.value = value;
-  // TODO
+  const clues = inputs.map(({ value }) => {
+    const parsed = parseInt(value, 10);
+    return isNaN(parsed) ? false : parsed;
+  });
+  console.log(clues);
+  if (clues.every((clue) => !clue)) {
+    statusBar.className = "status-bar";
+    return;
+  }
+  statusBar.className = "status-bar thinking";
+  setTimeout(() => {
+    const solution = solve(clues);
+    if (solution) {
+      statusBar.className = "status-bar complete";
+      buildings.forEach((building, index) => {
+        building.innerHTML = solution[index];
+      });
+    } else {
+      statusBar.className = "status-bar invalid";
+      buildings.forEach((building, index) => {
+        building.innerHTML = "";
+      });
+    }
+  }, 500);
 }
 
 inputs.forEach((input) => {

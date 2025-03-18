@@ -85,10 +85,10 @@ input::-webkit-inner-spin-button {
 
 .status-bar {
   background-color: #eee;
+  border-radius: 4px;
   height: 10px;
   margin: 5px auto 60px;
   width: 354px;
-  border-radius: 4px;
 }
 
 .status-bar.thinking {
