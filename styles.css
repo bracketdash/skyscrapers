@@ -1,0 +1,104 @@
+html,
+body {
+  background-color: #fff;
+  font-family: "Helvetica", "Arial", "Verdana", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #369;
+  padding: 10px 0;
+}
+
+.header > h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto 0;
+  text-align: center;
+  width: 347px;
+}
+
+.inputs-row {
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  padding: 20px 2px 20px 0px;
+}
+
+input {
+  -moz-appearance: textfield;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 20px;
+  height: 30px;
+  position: relative;
+  text-align: center;
+  width: 32px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputs-and-city {
+  display: flex;
+  gap: 20px;
+}
+
+.inputs-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 7px;
+}
+
+.city {
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+  height: 230px;
+  width: 230px;
+}
+
+.city div {
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  height: 45px;
+  width: 45px;
+  float: left;
+}
+
+.status-bar {
+  background-color: #eee;
+  height: 10px;
+  margin: 5px auto 60px;
+  width: 354px;
+  border-radius: 4px;
+}
+
+.status-bar.thinking {
+  background-color: #369;
+}
+
+.status-bar.complete {
+  background-color: #0b0;
+}
+
+.status-bar.invalid {
+  background-color: #911;
+}
