@@ -83,6 +83,7 @@ input::-webkit-inner-spin-button {
   color: #0b0;
   float: left;
   height: 45px;
+  line-height: 45px;
   width: 45px;
 }
 
