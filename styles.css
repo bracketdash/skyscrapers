@@ -35,17 +35,22 @@ body {
 
 .inputs-row {
   display: flex;
-  gap: 9px;
+  gap: 12px;
   justify-content: center;
-  padding: 20px 2px 20px 0px;
+  padding: 20px 7px 20px 0px;
 }
 
 input {
   -moz-appearance: textfield;
+  -webkit-appearance: none;
+  -webkit-border-radius: 5px;
+  appearance: none;
   border-radius: 5px;
   border: 1px solid #333;
   font-size: 20px;
   height: 30px;
+  margin: 0;
+  padding: 0;
   position: relative;
   text-align: center;
   width: 32px;
@@ -65,8 +70,8 @@ input::-webkit-inner-spin-button {
 .inputs-column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-top: 7px;
+  gap: 13px;
+  padding-top: 8px;
 }
 
 .city {
