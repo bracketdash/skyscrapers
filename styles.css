@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 15px auto 0;
+  min-width: 347px;
   text-align: center;
   width: 347px;
 }
